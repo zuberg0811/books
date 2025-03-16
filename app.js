@@ -70,9 +70,9 @@ app.use(function(err, req, res, next) {
 });
 
 //config custom port (default port: 3000)
-var port = process.env.PORT || 80
+var port = process.env.PORT || 3000
 var host = '127.0.0.1';
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`Web server is running at ${host} ` + port)
 })
 
