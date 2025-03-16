@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,23 +19,16 @@ var mongoose = require('mongoose')
 //note: "greenwich_book" is database name
 const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb+srv://rabb1t:frQsJsh7KUvGHO29@toystoredb.jcpoj.mongodb.net/?retryWrites=true&w=majority&appName=ToyStoreDB";
-const uri = "mongodb+srv://rabb1t:frQsJsh7KUvGHO29@toystoredb.jcpoj.mongodb.net/?retryWrites=true&w=majority&appName=ToysDB";
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
-console.log(client)
-mongoose.connect('mongodb+srv://rabb1t:frQsJsh7KUvGHO29@toystoredb.jcpoj.mongodb.net/ToysDB?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB!');
+
+const mongoURI = process.env.MONGODB_URI;
+mongoose.connect(mongoURI,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }).then(() => {
+    console.log('Connected to MongoDB!');
 }).catch((error) => {
-  console.error('Error connecting to MongoDB:', error);
+    console.error('Error connecting to MongoDB:', error);
 });
 
 // run().catch(console.dir);
