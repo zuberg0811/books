@@ -4,17 +4,17 @@
          <div class="card shadow-sm form-container">
             <div class="card-header bg-primary text-white p-3">
                <h2 class="mb-0 text-center fw-bold">
-                  <i class="fas fa-edit me-2"></i>Edit Book
+                  <i class="fas fa-edit me-2"></i>Edit Toy
                </h2>
             </div>
             
             <div class="card-body p-4">
-               <form action="/book/edit/{{book._id}}" method="post">
+               <form action="/toy/edit/{{book._id}}" method="post">
                   <div class="row">
                      <div class="col-md-6">
                         <div class="form-group mb-3">
                            <label for="title" class="form-label">
-                              <i class="fas fa-book me-1"></i>Book Title <span class="text-danger">*</span>
+                              <i class="fas fa-book me-1"></i>Toy Title <span class="text-danger">*</span>
                            </label>
                            <input 
                               id="title"
@@ -30,7 +30,7 @@
                         
                         <div class="form-group mb-3">
                            <label for="author" class="form-label">
-                              <i class="fas fa-user me-1"></i>Book Author <span class="text-danger">*</span>
+                              <i class="fas fa-user me-1"></i>Toy Author <span class="text-danger">*</span>
                            </label>
                            <input 
                               id="author"
@@ -44,7 +44,7 @@
                         
                         <div class="form-group mb-3">
                            <label for="price" class="form-label">
-                              <i class="fas fa-tag me-1"></i>Book Price ($) <span class="text-danger">*</span>
+                              <i class="fas fa-tag me-1"></i>Toy Price ($) <span class="text-danger">*</span>
                            </label>
                            <div class="input-group">
                               <span class="input-group-text">$</span>
@@ -66,7 +66,7 @@
                      <div class="col-md-6">
                         <div class="form-group mb-3">
                            <label for="quantity" class="form-label">
-                              <i class="fas fa-boxes me-1"></i>Book Quantity <span class="text-danger">*</span>
+                              <i class="fas fa-boxes me-1"></i>Toys Quantity <span class="text-danger">*</span>
                            </label>
                            <input 
                               id="quantity"
@@ -82,7 +82,7 @@
                         
                         <div class="form-group mb-3">
                            <label for="image" class="form-label">
-                              <i class="fas fa-image me-1"></i>Book Cover Image <span class="text-danger">*</span>
+                              <i class="fas fa-image me-1"></i>Toys Cover Image <span class="text-danger">*</span>
                            </label>
                            <div class="mb-2">
                               <img src="{{book.image}}" class="img-thumbnail" style="height: 100px;" alt="Current cover of {{book.title}}">
@@ -115,11 +115,11 @@
                   </div>
                   
                   <div class="form-group mt-4 d-flex justify-content-between">
-                     <a href="/book/list" class="btn btn-outline-secondary">
+                     <a href="/toy/list" class="btn btn-outline-secondary">
                         <i class="fas fa-arrow-left me-1"></i>Back to List
                      </a>
                      <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-save me-1"></i>Update Book
+                        <i class="fas fa-save me-1"></i>Update Toys
                      </button>
                   </div>
                </form>

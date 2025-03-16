@@ -35,7 +35,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //3. declare & config BookRouter
 var BookRouter = require('./routes/book');
-app.use('/book', BookRouter)
+app.use('/toy', BookRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

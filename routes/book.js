@@ -27,7 +27,7 @@ router.get('/delete/:id', async (req, res) => {
    //find book id in DB to delete
    await BookModel.findByIdAndDelete(id)
    //redirect to book list page after deletion
-   res.redirect("/book/list")
+   res.redirect("/toy/list")
 })
 
 //add new book (1) => render add form
@@ -43,7 +43,7 @@ router.post('/add', async (req, res) => {
    //add data to database
    await BookModel.create(book)
    //redirect to book list page after adding
-   res.redirect("/book/list")
+   res.redirect("/toy/list")
 })
 
 //edit book (1) => render edit form
@@ -60,7 +60,7 @@ router.post('/edit/:id', async (req, res) => {
    let id = req.params.id
    let book = req.body
    await BookModel.findByIdAndUpdate(id, book)
-   res.redirect("/book/list")
+   res.redirect("/toy/list")
 })
 
 module.exports = router
