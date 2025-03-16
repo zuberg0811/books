@@ -20,7 +20,7 @@ const BookSchema = mongoose.Schema(
 
 //declare BookModel
 //"books" is collection name
-const BookModel = mongoose.model("books", BookSchema);
+const BookModel = mongoose.model("toy", BookSchema);
 
 //export model
 module.exports = BookModel

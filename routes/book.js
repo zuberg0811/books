@@ -4,7 +4,9 @@ const BookModel = require('../models/BookModel')
 
 //view all books
 //URL: localhost:3000/book
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => 
+   {
+    console.log("123")  
    let books = await BookModel.find({}).sort({"_id" : -1})
    res.render('book/books', { books })
 })
